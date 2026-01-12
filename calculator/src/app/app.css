@@ -1,0 +1,28 @@
+
+.title{
+    color: wheat;
+    background-color: gray;
+    text-align: center;
+    margin-bottom: 15px;
+}
+.container{
+    container-type: calc();
+    justify-items: center;
+}
+.userInput{
+    width: 97.5%;
+}
+.output{
+    border: 1px solid black;
+    height: 20px;
+}
+
+button{
+    width: 70px;
+    height: 30px;
+    padding: auto;
+}
+.large-btn{
+    width: 140px;
+    height: 30px;
+}
