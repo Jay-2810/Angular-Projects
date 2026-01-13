@@ -1,0 +1,17 @@
+.dashboard{
+    width: 350px;
+    height: 100vh;
+    border: 2px solid white;
+}
+h2{
+    text-align: center;
+    color: aliceblue;
+}
+a{
+    color: wheat;
+    text-decoration: none;
+}
+.active{
+    font-weight: bolder; 
+    border-bottom: 2px solid wheat;
+}
