@@ -1,0 +1,22 @@
+.star-print {
+  margin-right: 4px; /* Adds slight spacing between stars in a row */
+  color: gold;
+  font-size: 1.2rem;
+  font-family: monospace;
+  white-space: pre;
+}
+h3{
+    color: white;
+    text-align: center;
+}
+.star-container{
+    display: flex;
+    justify-content: space-between; 
+    margin-left:150px;
+    padding: auto;
+}
+
+.star-row{
+    /* justify-content: center; */
+    margin-right: 20px;
+}
