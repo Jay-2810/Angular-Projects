@@ -32,6 +32,10 @@ export class Starpattern {
   crossStar:string[]=[];
   butterfly:string[]=[];
   hollowButterfly:string[]=[];
+  triangle:string[]=[];
+  hollowTriangle:string[]=[];
+  hollowReverseTriangle:string[]=[];
+  hollowHourGlass:string[]=[];
   ngOnInit() {
     // Left Triangle
     for (let i = 1; i <= this.rows; i++) {
@@ -283,6 +287,66 @@ export class Starpattern {
         }
       }
       this.hollowButterfly.push(st);
+    }
+    // Triangle
+    for(let i=1;i<=this.rows;i++){
+      let st="";
+      st+=" ".repeat(this.rows-i);
+      st+="* ".repeat(i);
+      this.triangle.push(st);
+    }
+    // Hollow Triangle
+    for(let i=1;i<=this.rows;i++){
+      let st="";
+      st+=" ".repeat(this.rows-i);
+      for(let j=1;j<=i;j++){
+        if(j===1 || j===i || i===this.rows){
+          st+="* ";
+        } else{
+          st+="  ";
+        }
+      }
+      this.hollowTriangle.push(st);
+    }
+    // Hollow Reverse Triangle
+    for(let i=this.rows;i>=1;i--){
+      let st="";
+      st+=" ".repeat(this.rows-i);
+      for(let j=1;j<=i;j++){
+        if(j===1 || j===i || i===this.rows){
+          st+="* ";
+        } else{
+          st+="  ";
+        }
+      }
+      this.hollowReverseTriangle.push(st);
+    }
+    // Hollow Hour Glass
+    // Upper part
+    for(let i=this.rows;i>=1;i--){
+      let st="";
+      st+=" ".repeat(this.rows-i);
+      for(let j=1;j<=i;j++){
+        if(j===1 || j===i || i===this.rows){
+          st+="* ";
+        } else{
+          st+="  ";
+        }
+      }
+      this.hollowHourGlass.push(st);
+    }
+    // Lower Part
+    for(let i=2;i<=this.rows;i++){
+      let st="";
+      st+=" ".repeat(this.rows-i);
+      for(let j=1;j<=i;j++){
+        if(j===1 || j===i || i===this.rows){
+          st+="* ";
+        } else{
+          st+="  ";
+        }
+      }
+      this.hollowHourGlass.push(st);
     }
   }
 }
