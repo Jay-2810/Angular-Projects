@@ -36,6 +36,7 @@ export class Starpattern {
   hollowTriangle:string[]=[];
   hollowReverseTriangle:string[]=[];
   hollowHourGlass:string[]=[];
+  kPattern:string[]=[];
   ngOnInit() {
     // Left Triangle
     for (let i = 1; i <= this.rows; i++) {
@@ -347,6 +348,15 @@ export class Starpattern {
         }
       }
       this.hollowHourGlass.push(st);
+    }
+    // K Pattern
+    for(let i=this.rows;i>=1;i--){
+      let st="*".repeat(i);
+      this.kPattern.push(st);
+    }
+    for(let i=2;i<=this.rows;i++){
+      let st="*".repeat(i);
+      this.kPattern.push(st);
     }
   }
 }
