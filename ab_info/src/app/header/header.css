@@ -1,0 +1,67 @@
+.logo{
+
+    width: 150px;
+    height: 135.57px;
+}
+li{
+    display: list-item;
+    margin-right: 30px;
+    font: 20px system-ui;
+}
+.navbar-nav{
+    display: flex;
+    padding-left: 0;
+    margin-bottom: 0;
+    list-style: none;
+}
+.container-fluid{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.main-menu{
+    display: inline-block;
+    position: relative;
+    /* margin-right: 20px; */
+}
+.container, .container-fluid, .container-lg, .container-md, .container-sm, .container-xl, .container-xxl {
+    --bs-gutter-x: 1.5rem;
+    --bs-gutter-y: 0;
+    width: 100%;
+    padding-right: calc(var(--bs-gutter-x) * .5);
+    padding-left: calc(var(--bs-gutter-x) * .5);
+    margin-right: auto;
+    margin-left: auto;
+}
+
+/* This forces the button to hide on large screens */
+@media (min-width: 992px) {
+  .navbar-toggler {
+    display: none !important;
+  }
+  
+  /* Ensures the menu is always visible on desktop */
+  .navbar-collapse {
+    display: flex !important;
+    flex-basis: auto;
+  }
+}
+.main-menu .active{
+    color: #1eafed;
+}
+.main-menu a{
+    color: black;
+    text-decoration: none;
+    text-decoration-line: none;
+    text-decoration-thickness: initial;
+    text-decoration-style: initial;
+    text-decoration-color: initial;
+    transition: color .3s;
+    text-transform: uppercase;
+    justify-content: space-between;
+    font-size: 20px;
+    font-weight: 500;
+    padding: 0 12px;
+    position: relative;
+}

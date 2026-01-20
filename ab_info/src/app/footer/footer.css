@@ -1,0 +1,145 @@
+.container{
+    width: 100%;
+    display: block;
+    align-items: flex-start;
+    text-align: left;
+}
+.text-center {
+    text-align: center !important;
+}
+div {
+    display: block;
+    unicode-bidi: isolate;
+}
+.row{
+    --bs-gutter-x: 1.5rem;
+    --bs-gutter-y: 0;
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    text-align: left; 
+    gap: 110px;
+    flex-wrap: wrap;
+    margin-top: calc(-1 * var(--bs-gutter-y));
+    margin-right: calc(-.5 * var(--bs-gutter-x));
+    margin-left: calc(-.5 * var(--bs-gutter-x));
+}
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+.footer{
+    padding: 70px;
+    background-color: #000;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    color: #fff;
+}
+footer {
+    width: auto;
+    display: block;
+    unicode-bidi: isolate;
+}
+a:-webkit-any-link {
+    color: #fff;
+    cursor: pointer;
+    text-decoration: none;
+}
+
+.text .description, .services .service-item, .contact .contact-item, .links .links-item{
+    text-align: left;
+}
+
+.service-item h4, .contact-item h4, .links h4 {
+    border-bottom: 1px solid #fff;
+    display: inline-block;
+    margin-bottom: 10px;
+    animation: borderBlink 1s ease-in-out infinite;
+    font-size: 26px;
+}
+@keyframes borderBlink {
+    0%, 100% {
+        border-color: #fff;
+    }
+    50% {
+        border-color: transparent;
+    }
+}
+@media (min-width: 1200px) {
+    .h4, h4 {
+        font-size: 1.5rem;
+    }
+}
+.h4, h4 {
+    font-size: calc(1.275rem + .3vw);
+}
+h4 {
+    display: block;
+    margin-block-start: 1.33em;
+    margin-block-end: 1.33em;
+    margin-inline-start: 0px;
+    margin-inline-end: 0px;
+    font-weight: bold;
+    unicode-bidi: isolate;
+}
+.h1, .h2, .h3, .h4, .h5, .h6, h1, h2, h3, h4, h5, h6 {
+    margin-top: 0;
+    margin-bottom: .5rem;
+    font-weight: 500;
+    line-height: 1.2;
+    color: var(--bs-heading-color);
+}
+h2, h3, h4{
+    color: #fff;
+}
+i[class^="ai-"]:before, i[class*=" ai-"]:before {
+    font-family: akar-icons !important;
+    font-style: normal;
+    font-weight: normal !important;
+    font-variant: normal;
+    text-transform: none;
+    line-height: 1;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+.ai-phone:before {
+    content: "\f226";
+}
+*, ::after, ::before {
+    box-sizing: border-box;
+}
+.service-item p, .links-item p, .contact-item p {
+    margin-left: 0;
+    text-align: left;
+    position: relative;
+    line-height: 2.5em;
+    width: auto;
+    display: flex;
+    font-size: 16px;
+}
+.row {
+    --bs-gutter-x: 1.5rem;
+    --bs-gutter-y: 0;
+    display: flex;
+    
+}
+.social-icons .a i{
+    margin-right: 20px;
+}
+.design {
+    background-color: #000;
+    text-align: center;
+    color: #fff;
+    font-size: 1rem;
+    padding: 10px;
+    border-top: 1px solid #fff;
+    cursor: pointer;
+}
+.design a{
+    text-decoration: none;
+    font-weight: 900;
+    color: #1eafed;
+}
