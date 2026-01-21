@@ -33,6 +33,7 @@ li{
     padding-left: calc(var(--bs-gutter-x) * .5);
     margin-right: auto;
     margin-left: auto;
+    margin-bottom: 0;
 }
 
 /* This forces the button to hide on large screens */
@@ -64,4 +65,7 @@ li{
     font-weight: 500;
     padding: 0 12px;
     position: relative;
+}
+ul li a{
+    color: #fff;
 }
