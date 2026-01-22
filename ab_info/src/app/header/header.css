@@ -6,13 +6,14 @@
 li{
     display: list-item;
     margin-right: 30px;
-    font: 20px system-ui;
+    font: 20px system-ui, -apple-system, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji";;
 }
 .navbar-nav{
     display: flex;
     padding-left: 0;
     margin-bottom: 0;
     list-style: none;
+    /* margin-right: 20px; */
 }
 .container-fluid{
     display: flex;
@@ -23,7 +24,7 @@ li{
 .main-menu{
     display: inline-block;
     position: relative;
-    /* margin-right: 20px; */
+    margin-right: 20px;
 }
 .container, .container-fluid, .container-lg, .container-md, .container-sm, .container-xl, .container-xxl {
     --bs-gutter-x: 1.5rem;
@@ -68,4 +69,32 @@ li{
 }
 ul li a{
     color: #fff;
+}
+/* .navbar{
+    background: transparent;
+    background-color: black;
+} */
+.brand-color img {
+    height: 150px;
+    width: auto;
+    font-weight: 700;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 50%;
+    background-color: transparent;
+    transition: .5s ease-in;
+}
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+img, svg {
+    vertical-align: middle;
+}
+.transparent-header{
+    background-color: transparent;
+}
+.black-header{
+    background-color: black;
 }

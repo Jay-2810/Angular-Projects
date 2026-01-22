@@ -1,4 +1,4 @@
-<nav class="navbar navbar-expand-lg bg-body-tertiary transparent-header">
+<nav class="navbar navbar-expand-lg bg-body-tertiary transparent-header" [ngClass]="{'transparent-header': isHomePage, 'black-header': !isHomePage}">
     <div class="container-fluid">
         <div class="d-flex align-items-center">
             <div class="navbar-brand-text">

@@ -1,0 +1,115 @@
+*, ::after, ::before {
+    box-sizing: border-box;
+}
+div {
+    display: block;
+    unicode-bidi: isolate;
+}
+.about-container{
+    padding: 50px;
+    background: linear-gradient(to right, #000, #000) !important;
+    z-index: -1;
+}
+.text h1{
+    font: 78px system-ui, -apple-system, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji";;
+    color: #fff;
+    font-weight: 700;
+    padding: 0 0 8px;
+    margin: 0;
+}
+.text h1 span{
+    color: #1eafed;
+}
+.text p{
+    font: 18px system-ui, -apple-system, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji";
+    color: #fff;
+    padding: 0 0 16px;
+    margin: 0;
+}
+a:-webkit-any-link {
+    color: -webkit-link;
+    cursor: pointer;
+    text-decoration: underline;
+}
+a {
+    color: rgba(var(--bs-link-color-rgb), var(--bs-link-opacity, 1));
+    text-decoration: underline;
+}
+a{
+    display: contents;
+}
+.button{
+    position: relative;
+    transition: all .3s ease-in-out;
+    box-shadow: 0 10px 20px #0003;
+    padding-block: .5rem;
+    padding-inline: 1.25rem;
+    background-color: #006bb3;
+    border-radius: 9999px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #fff;
+    font: 22px system-ui, -apple-system, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji"    ;
+    gap: 10px;
+    font-weight: 700;
+    border: 3px solid #ffffff4d;
+    outline: none;
+    overflow: hidden;
+    width: auto;
+    height: 53.8px;
+    margin-top: 50px;
+    padding: 8px 20px;
+    cursor: pointer;
+}
+button select{
+    text-transform: none;
+}
+.icon{
+    width: 24px;
+    height: 24px;
+    transition: all .3s ease-in-out;
+}
+.button:hover .icon{
+    transform: translate(4px);
+}
+svg{
+    fill: currentcolor;
+}
+svg:not(:root) {
+    overflow-clip-margin: content-box;
+    overflow: hidden;
+}
+img, svg {
+    vertical-align: middle;
+}
+:not(svg) {
+    transform-origin: 0px 0px;
+}
+.button:hover {
+  transform: scale(1.05); /* Scales the whole button up slightly */
+}
+
+/* 2. THE SHINE EFFECT (The left-to-right sweep) */
+.button::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: -100%; /* Start hidden on the left */
+  width: 15%;
+  height: 100%;
+  background: linear-gradient(
+    120deg,
+    transparent,
+    rgba(255, 255, 255, 0.5),
+    transparent
+  );
+  transform: skewX(-25deg); /* Slanted light look */
+  z-index: 2;
+}
+
+/* When cursor touches the button, move the shine to the right */
+.button:hover::before {
+  left: 100%; 
+  transition: left 1s ease-in-out; 
+}
