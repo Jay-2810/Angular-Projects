@@ -24,3 +24,143 @@
         </div>
     </div>
 </section>
+<div class="aboutus-container">
+    <div class="about">
+        <div class="text-container">
+            <h1>About Us</h1>
+        </div>
+        <nav>
+            <div id="nav-tab" role="tablist" class="nav nav-tabs">
+            <button 
+                id="nav-tab1"
+                class="nav-link" 
+                [class.active]="activeTab === 'mission'" 
+                (click)="setActiveTab('mission')"
+                type="button" 
+                role="tab">
+                Our Mission
+            </button>
+
+            <button 
+                id="nav-tab2"
+                class="nav-link" 
+                [class.active]="activeTab === 'services'" 
+                (click)="setActiveTab('services')"
+                type="button" 
+                role="tab">
+                Services
+            </button>
+            </div>
+        </nav>
+        <div id="nav-tabcontent" class="tab-content p-0 pt-4">
+            <hr style="color: rgb(244, 244, 244); width: 1056.64px;">
+            <div *ngIf="activeTab ==='mission'" id="tab1-1" role="tabpanel" class="tab-pane fade show active" aria-labelledby="nav-tab1">
+                <p class="lead font-w-7 text-black">
+                    At AB Info, our mission is to drive innovation and excellence in everything we do. We are 
+                    dedicated to providing top-quality products and services that not only meet but exceed 
+                    our customers' expectations. Through continuous improvement and a commitment to sustainability, 
+                    we strive to make a positive impact on the communities we serve. Our goal is to inspire and 
+                    empower individuals and organizations to achieve their fullest potential, fostering a culture 
+                    of growth, collaboration, and success.
+                </p>
+            </div>
+            <div *ngIf="activeTab==='services'" id="tab1-2" role="tabpanel" class="tab-pane fade show active" aria-labelledby="nav-tab1">
+                <p class="lead font-w-7 text-black">
+                    AB Info offers a diverse array of IT services and solutions designed to align with the strategic 
+                    objectives of your business. Whether you seek comprehensive IT support or specialized resources 
+                    for intricate technical projects, our seasoned professionals are equipped to craft tailored, 
+                    highly-effective solutions to meet your distinct challenges and specific IT needs. We excel 
+                    in delivering cutting-edge technology solutions that drive operational efficiency, foster innovation, 
+                    and propel your business towards sustained success in a rapidly evolving digital landscape.
+                </p>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="counting">
+    <div class="stats-container">
+        <div class="stat">
+            <span class="counter" id="happy-customers" data-target="40">40+</span>
+            <p>Happy Customers Worldwide</p>
+        </div>
+        <div class="stat">
+            <span class="counter" id="years-of-experience" data-target="10">10+</span>
+            <p>Years of experience</p>
+        </div>
+        <div class="stat">
+            <span class="counter" id="hours-of-work" data-target="10000">10000+</span>
+            <p>Hours of work experience</p>
+        </div>
+        <div class="stat">
+            <span class="counter" id="team-members" data-target="16">16+</span>
+            <p>Creative & passionate mambers</p>
+        </div>
+    </div>
+</div>
+<div class="services-container">
+    <h2 class="services-heading">Our Comprehensive Services</h2>
+    <p class="services-description">
+        Explore our range of top-notch services designed to 
+        meet your business needs. From fast and professional support to dedicated IT 
+        solutions, we ensure your success through our expertise and commitment.
+    </p>
+    <div class="services-explain">
+        <div class="services-all">
+            <div class="services-info">
+                <div style="opacity: 1; transform: none;">
+                    <div class="services-image">
+                        <img src="/assets/images/about-01.png" >
+                    </div>
+                    <div class="services-text">
+                        <p class="text-1">Fast & Professional Support</p>
+                        <p class="text-2">Web design is more than just a profession at our company; 
+                            it's a powerful way to create impactful digital experiences.
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <div class="services-info">
+                <div style="opacity: 1; transform: none;">
+                    <div class="services-image">
+                        <img src="/assets/images/about-02.png" >
+                    </div>
+                    <div class="services-text">
+                        <p class="text-1">Software Asset Management</p>
+                        <p class="text-2">Software asset management is more than just a profession 
+                            at our company; it's a powerful tool for optimizing and managing software resources efficiently.
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <div class="services-info">
+                <div style="opacity: 1; transform: none;">
+                    <div class="services-image">
+                        <img src="/assets/images/about-03.png" >
+                    </div>
+                    <div class="services-text">
+                        <p class="text-1">Dedicated IT Solutions</p>
+                        <p class="text-2">Dedicated IT solutions are more than just a profession at our company; 
+                            they represent a powerful approach to meeting our clients' needs.
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <div class="services-info">
+                <div style="opacity: 1; transform: none;">
+                    <div class="services-image">
+                        <img src="/assets/images/about-04.png" >
+                    </div>
+                    <div class="services-text">
+                        <p class="text-1">User System Credentials</p>
+                        <p class="text-2">Managing user system credentials is more than just a profession at our 
+                            company; it's a critical aspect of ensuring secure and efficient operations.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="map">
+    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3863.988936283951!2d72.76804913046686!3d21.213824917644512!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3be04dfd3972d345%3A0xc4c901d9e5dae680!2sAB%20Info!5e0!3m2!1sen!2sin!4v1769080976135!5m2!1sen!2sin" width="100%" height="600" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+</div>
