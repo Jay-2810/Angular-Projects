@@ -7,7 +7,7 @@ div {
 }
 .about-container{
     padding: 50px;
-    background: linear-gradient(to right, #000, #000) !important;
+    background: linear-gradient(to right, #000, #1a1a1a) !important;
     z-index: -1;
 }
 .text h1{

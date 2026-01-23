@@ -1,0 +1,235 @@
+*, ::after, ::before {
+    box-sizing: border-box;
+}
+div {
+    display: block;
+    unicode-bidi: isolate;
+}
+.about-container{
+    padding: 50px;
+    background: linear-gradient(to right, #000000, #1a1a1a) !important;
+}
+.text h1 {
+    font: 78px system-ui, -apple-system, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji";
+    color: #fff;
+    font-weight: 700;
+    margin: 0px 0px 8px;
+}
+.text span{
+    color: #1eafed;
+}
+@media (min-width: 1200px) {
+    .h1, h1 {
+        font-size: 2.5rem;
+    }
+}
+.h1, h1 {
+    font-size: calc(1.375rem + 1.5vw);
+}
+.h1, .h2, .h3, .h4, .h5, .h6, h1, h2, h3, h4, h5, h6 {
+    margin-top: 0;
+    margin-bottom: .5rem;
+    font-weight: 500;
+    line-height: 1.2;
+    color: var(--bs-heading-color);
+}
+*, ::after, ::before {
+    box-sizing: border-box;
+}
+h1 {
+    display: block;
+    font-size: 2em;
+    margin-block-start: 0.67em;
+    margin-block-end: 0.67em;
+    margin-inline-start: 0px;
+    margin-inline-end: 0px;
+    font-weight: bold;
+    unicode-bidi: isolate;
+}
+.text p{
+    font: 18px system-ui, -apple-system, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji";
+    color: #fff;
+    margin: 0px 0px 16px;
+    font-weight: 400;
+    max-width: 800px;
+}
+p {
+    margin-top: 0;
+    margin-bottom: 1rem;
+}
+p {
+    display: block;
+    margin-block-start: 1em;
+    margin-block-end: 1em;
+    margin-inline-start: 0px;
+    margin-inline-end: 0px;
+    unicode-bidi: isolate;
+}
+a:-webkit-any-link {
+    color: -webkit-link;
+    cursor: pointer;
+    text-decoration: underline;
+}
+a {
+    color: rgba(var(--bs-link-color-rgb), var(--bs-link-opacity, 1));
+    text-decoration: underline;
+}
+a{
+    display: contents;
+}
+.button{
+    position: relative;
+    transition: all .3s ease-in-out;
+    box-shadow: 0 10px 20px #0003;
+    padding-block: .5rem;
+    padding-inline: 1.25rem;
+    background-color: #006bb3;
+    border-radius: 9999px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #fff;
+    font: 22px system-ui, -apple-system, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji";
+    gap: 10px;
+    font-weight: 700;
+    border: 3px solid #ffffff4d;
+    outline: none;
+    overflow: hidden;
+    width: auto;
+    height: 53.8px;
+    margin-top: 50px;
+    padding: 8px 20px;
+    cursor: pointer;
+}
+button select{
+    text-transform: none;
+}
+.icon{
+    width: 24px;
+    height: 24px;
+    transition: all .3s ease-in-out;
+}
+.button:hover .icon{
+    transform: translate(4px);
+}
+svg{
+    fill: currentcolor;
+}
+svg:not(:root) {
+    overflow-clip-margin: content-box;
+    overflow: hidden;
+}
+img, svg {
+    vertical-align: middle;
+}
+:not(svg) {
+    transform-origin: 0px 0px;
+}
+.button:hover {
+  transform: scale(1.05); /* Scales the whole button up slightly */
+}
+
+/* 2. THE SHINE EFFECT (The left-to-right sweep) */
+.button::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: -50%; /* Start hidden on the left */
+  width: 15%;
+  height: 100%;
+  background: linear-gradient(
+    120deg,
+    transparent,
+    rgba(255, 255, 255, 0.5),
+    transparent
+  );
+  transform: skewX(-25deg); /* Slanted light look */
+  z-index: 2;
+}
+
+/* When cursor touches the button, move the shine to the right */
+.button:hover::before {
+  left: 150%;
+  transition: left 1.2s ease-in-out 0s; 
+}
+.career-container {
+    overflow: hidden;
+    white-space: nowrap;
+    padding: 40px;
+    background-color: #1eafed;
+}
+.heading{
+    height: 50vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.heading h1{
+    font: 50px system-ui, -apple-system, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji";
+    font-weight: 700;
+    color: #212529;
+    margin: 0px 0px 8px;
+}
+.heading p{
+    font: 25px system-ui, -apple-system, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji";
+    text-align: justify;
+    font-weight: 400;
+    width: 1100px;
+    white-space: normal;
+    color: #fff;
+    margin: 0px 0px 16px;
+}
+.button-1 {
+    line-height: 1;
+    text-decoration: none !important;
+    display: inline-flex;
+    align-items: center;
+    gap: .75rem;
+    background-color: #54aeef;
+    color: #fff !important;
+    border-radius: 10rem;
+    font-weight: 600;
+    padding: .75rem 1.5rem;
+    padding-left: 20px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    transition: background-color .3s;
+    border: 1px solid #000;
+    margin-top: 20px;
+    height: 25px;
+    font-family: system-ui, -apple-system, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji";
+}
+.button__icon-wrapper {
+    flex-shrink: 0;
+    width: 25px;
+    height: 25px;
+    position: relative;
+    color: var(--clr);
+    background-color: #fff;
+    border-radius: 50%;
+    display: grid;
+    place-items: center;
+    overflow: hidden;
+}
+.button__icon-svg--copy{
+    position: absolute;
+    transform: translate(-150%, 150%);
+}
+.button-1:hover .button__icon-svg--copy{
+    transition: transform .3s ease-in-out .1s;
+    transform: translate(0);
+    color: #000;
+}
+.button-1:hover{
+    background-color: #000;
+}
+.button__icon-svg{
+    width: 10px;
+    height: 10px;
+    transition: transform .3s ease-in-out;
+}
+.button-1:hover .button__icon-svg:not(.button__icon-svg--copy) {
+    transform: translate(150%, -150%);
+}

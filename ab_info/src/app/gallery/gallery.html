@@ -1,1 +1,30 @@
-<p>gallery works!</p>
+<section>
+    <div class="gallery-container">
+        <div class="text">
+            <h1>Cherishing Moments of <br><span>Joy & Togetherness</span></h1>
+            <p>Experience the laughter, excitement, and unforgettable memories 
+                that bring our team closer with every celebration.
+            </p>
+        </div>
+    </div>
+    <div class="gallery-container-1">
+        <div class="team">
+            <img src="/assets/images/picnic-13.jpg" class="team-image">
+        </div>
+    </div>
+    <div class="gallery-background">
+        <div class="gallery-filter">
+            <button (click)="setCategory('all')" [class.active]="selectedCategory==='all'">All</button>
+            <button (click)="setCategory('festival')" [class.active]="selectedCategory==='festival'">Festivals</button>
+            <button (click)="setCategory('picnic')" [class.active]="selectedCategory==='picnic'">Picnic</button>
+            <button (click)="setCategory('sport')" [class.active]="selectedCategory==='sport'">Sports</button>
+        </div>
+        <div class="gallery-grid">
+            <ng-container *ngFor="let image of images">
+                <div class="grid-item" *ngIf="selectedCategory==='all' || image.category===selectedCategory">
+                    <img [src]="image.url" alt="gallery image">
+                </div>
+            </ng-container>
+        </div>
+    </div>
+</section>

@@ -260,10 +260,13 @@ img {
     border: #1eafed 1.5px solid;
     border-radius: 20px;
     transition: transform .5s ease;
-    transform: skewX(-10deg);
+    transform: skewX(-10deg) scale(1.05);
     z-index: 10;
     transform-style: preserve-3d;
     perspective: 1000px;
+}
+.review:hover::before{
+    transform: scale(1.05) !important;
 }
 .review-gif{
     float: left;
