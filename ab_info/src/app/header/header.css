@@ -12,15 +12,24 @@ li{
     display: flex;
     padding-left: 0;
     margin-bottom: 0;
-    list-style: none;
-    /* margin-right: 20px; */
+    list-style: none;  
 }
 .container-fluid{
     display: flex;
     justify-content: space-between;
     align-items: center;
 }
-
+.menu-toggle{
+    background: transparent;
+    color: #fff;
+    width: 30px;
+    height: 30px;
+    font-size: 30px;
+    border: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
 .main-menu{
     display: inline-block;
     position: relative;
@@ -35,19 +44,6 @@ li{
     margin-right: auto;
     margin-left: auto;
     margin-bottom: 0;
-}
-
-/* This forces the button to hide on large screens */
-@media (min-width: 992px) {
-  .navbar-toggler {
-    display: none !important;
-  }
-  
-  /* Ensures the menu is always visible on desktop */
-  .navbar-collapse {
-    display: flex !important;
-    flex-basis: auto;
-  }
 }
 .main-menu .active{
     color: #1eafed;
@@ -70,10 +66,6 @@ li{
 ul li a{
     color: #fff;
 }
-/* .navbar{
-    background: transparent;
-    background-color: black;
-} */
 .brand-color img {
     height: 150px;
     width: auto;
@@ -97,4 +89,26 @@ img, svg {
 }
 .black-header{
     background-color: black;
+}
+.nav-link span{
+    position: relative;
+    font-family: Ubuntu, sans-serif;
+    font-size: 18px;
+    text-transform: none !important;
+    font-weight: 700;
+    letter-spacing: .05em;
+    color: #fff;
+}
+svg{
+    position: relative;
+    top: 0;
+    margin-left: 10px;
+    fill: none;
+    stroke-linecap: round;
+    stroke-linejoin: round;
+    stroke: #fff;
+    stroke-width: 2;
+    transform: translate(-5px);
+    transition: all .3s ease;
+    margin-top: -3px;
 }

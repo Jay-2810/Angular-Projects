@@ -11,11 +11,18 @@ import { NgClass } from "@angular/common";
 })
 export class Header implements OnInit{
   constructor(private router:Router){}
+  isMenuOpen=false;
   isHomePage:boolean=false;
   ngOnInit(): void {
     this.router.events.pipe(
       filter(event=>event instanceof NavigationEnd)).subscribe((event:any)=>{
         this.isHomePage=event.url==='/';
       });
+  }
+  menuToggle(){
+    this.isMenuOpen=!this.isMenuOpen;
+  }
+  closeMenu() {
+    this.isMenuOpen = false;
   }
 }

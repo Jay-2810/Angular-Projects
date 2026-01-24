@@ -146,8 +146,6 @@ img, svg {
   transform: skewX(-25deg); /* Slanted light look */
   z-index: 2;
 }
-
-/* When cursor touches the button, move the shine to the right */
 .button:hover::before {
   left: 150%;
   transition: left 1.2s ease-in-out 0s; 
@@ -198,7 +196,6 @@ img, svg {
     transition: background-color .3s;
     border: 1px solid #000;
     margin-top: 20px;
-    height: 25px;
     font-family: system-ui, -apple-system, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji";
 }
 .button__icon-wrapper {
@@ -232,4 +229,63 @@ img, svg {
 }
 .button-1:hover .button__icon-svg:not(.button__icon-svg--copy) {
     transform: translate(150%, -150%);
+}
+.why-container{
+    padding: 100px;
+    background-color: #f9f9f9;
+}
+.ab-header {
+    margin-bottom: 50px;
+}
+.ab-title{
+    font-size: 58px;
+    font-weight: 700;
+    color: #212529;
+    margin: 0px 0px 20px;
+    font-family: system-ui, -apple-system, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji";
+}
+.ab-subtitle{
+    font-size: 20px;
+    font-weight: 400;
+    color: #212529;
+    margin: 0px 0px 40px;
+    line-height: 1.6;
+    font-family: system-ui, -apple-system, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji";
+}
+.ab-benefits{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+.benefits{
+    background-color: #fff;
+    padding: 20px;
+    box-shadow: 0 4px 6px #0000001a;
+    flex: 1 1 calc(33.333% - 20px);
+    box-sizing: border-box;
+    transition: transform .3s ease-in-out;
+}
+.benefits:hover{
+    transform: translatey(-10px);
+    border: 1px solid black;
+}
+.benefit-icon{
+    width: 65px;
+    height: auto;
+    margin-bottom: 15px;
+}
+.benefit-title{
+    font-size: 24px;
+    font-weight: 700;
+    color: #212529;
+    margin: 0px 0px 10px;
+    font-family: system-ui, -apple-system, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji";
+}
+.benefit-info{
+    font-size: 18px;
+    font-weight: 400;
+    color: #212529;
+    line-height: 1.5;
+    margin: 0px 0px 16px;
+    font-family: system-ui, -apple-system, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji";
 }
