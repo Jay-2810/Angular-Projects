@@ -17,7 +17,7 @@
 <div class="container-2">
     <div class="content-1">
         <div class="text-content">
-            <h1 class="title">Why Choose AB <br> Info?</h1>
+            <h1 class="title">Why Choose AB <br class="hide"> Info?</h1>
             <p> We offer a unique blend of technical expertise, creative vision, and personalized service. 
                 Our team of experts works closely with you to understand your goals, providing customized 
                 solutions that drive business success. With AB Info, you can expect exceptional quality, 
@@ -169,101 +169,110 @@
     <p class="client-paragraph">At AB Info, we are committed to making an impact. But don’t just take our word for it –
          see what our clients have to say about their experiences working with us.
     </p>
-    <div class="reviews-container">
-        <div class="review" id="review1">
-            <img src="/assets/gifs/lightning.gif" alt="" class="review-gif">
-            <br>
-            <br>
-            <br>
-            <div class="review-content">
-                I have had the pleasure of encountering remarkable individuals who possess extensive knowledge and 
-                expertise in the field of technology, particularly in the realm of .NET and Microsoft technologies. 
-                I am grateful to have had the opportunity to engage with such exceptional professionals in the technology domain.
+    <div class="reviews-section">   
+        <div class="reviews-container" #scrollContainer (scroll)="onScroll()">
+            <div class="review" id="review1">
+                <img src="/assets/gifs/lightning.gif" alt="" class="review-gif">
+                <br>
+                <br>
+                <br>
+                <div class="review-content">
+                    I have had the pleasure of encountering remarkable individuals who possess extensive knowledge and 
+                    expertise in the field of technology, particularly in the realm of .NET and Microsoft technologies. 
+                    I am grateful to have had the opportunity to engage with such exceptional professionals in the technology domain.
+                </div>
+                <div class="review-bottom">
+                    <hr class="review-line">
+                    <p class="reviewer-name">Suresh Murli</p>
+                </div>
             </div>
-            <div class="review-bottom">
-                <hr class="review-line">
-                <p class="reviewer-name">Suresh Murli</p>
+            <div class="review" id="review2">
+                <img src="/assets/gifs/lightning.gif" alt="" class="review-gif">
+                <br>
+                <br>
+                <br>
+                <div class="review-content">
+                    AB Info helped me create my salon website using Angular. They were very professional and made the process easy.
+                    The team was friendly and answered all my questions. My website looks great and works well. I am very happy
+                    with their service and would recommend them to others.
+                </div>
+                <div class="review-bottom">
+                    <hr class="review-line">
+                    <p class="reviewer-name">Sunny Dogra</p>
+                </div>
+            </div>
+            <div class="review" id="review3">
+                <img src="/assets/gifs/lightning.gif" alt="" class="review-gif">
+                <br>
+                <br>
+                <br>
+                <div class="review-content">
+                    They created a wonderful website for my pet grooming shop using WordPress. They were efficient and very 
+                    helpful throughout the process. The team communicated clearly and made sure all my needs were met. 
+                    The final product is attractive and user-friendly. I highly recommend AB Info for their excellent 
+                    service and expertise.
+                </div>
+                <div class="review-bottom">
+                    <hr class="review-line">
+                    <p class="reviewer-name">Rajiv Rolhan</p>
+                </div>
+            </div>
+            <div class="review" id="review4">
+                <img src="/assets/gifs/lightning.gif" alt="" class="review-gif">
+                <br>
+                <br>
+                <br>
+                <div class="review-content">
+                    AB Info created a fantastic website for my mutual fund business. They were professional and efficient 
+                    throughout the project. The team was knowledgeable and provided clear, helpful advice. The website is 
+                    modern, informative, and easy to navigate. I'm very satisfied with their work.
+                </div>
+                <div class="review-bottom">
+                    <hr class="review-line">
+                    <p class="reviewer-name">Alpana Singh</p>
+                </div>
+            </div>
+            <div class="review" id="review5">
+                <img src="/assets/gifs/lightning.gif" alt="" class="review-gif">
+                <br>
+                <br>
+                <br>
+                <div class="review-content">
+                    AB Info did an outstanding job building my mobile aplication. They were professional, efficient, and easy 
+                    to work with. The team was very knowledgeable and provided clear guidance throughout the process. The final 
+                    website is sleek, fast, and user-friendly. I am extremely pleased with their work and highly 
+                    recommend AB Info to others.
+                </div>
+                <div class="review-bottom">
+                    <hr class="review-line">
+                    <p class="reviewer-name">Apvinder Shandhu</p>
+                </div>
+            </div>
+            <div class="review" id="review6">
+                <img src="/assets/gifs/lightning.gif" alt="" class="review-gif">
+                <br>
+                <br>
+                <br>
+                
+                <div class="review-content">
+                    AB Info excels in web development. They delivered a superb website for my business. The team was 
+                    skilled, responsive, and guided me through every step of the development process. The website 
+                    they created is intuitive, fast, and exactly what I needed. I highly recommend AB Info for 
+                    anyone looking to build a top-notch web solution.
+                </div>
+                <div class="review-bottom">
+                    <hr class="review-line">
+                    <p class="reviewer-name">Dipesh Arora</p>
+                </div>
             </div>
         </div>
-        <div class="review" id="review2">
-            <img src="/assets/gifs/lightning.gif" alt="" class="review-gif">
-            <br>
-            <br>
-            <br>
-            <div class="review-content">
-                AB Info helped me create my salon website using Angular. They were very professional and made the process easy.
-                The team was friendly and answered all my questions. My website looks great and works well. I am very happy
-                with their service and would recommend them to others.
-            </div>
-            <div class="review-bottom">
-                <hr class="review-line">
-                <p class="reviewer-name">Sunny Dogra</p>
-            </div>
+        <div class="custom-scroll-nav">
+        <div class="scroll-track" #track (mousedown)="onTrackClick($event)">
+            <div class="scroll-thumb" [style.left.%]="scrollPercentage" [class.dragging]="isDragging"
+                 (mousedown)="startDragging($event)"
+                 (touchstart)="startDragging($event)"></div>
         </div>
-        <div class="review" id="review3">
-            <img src="/assets/gifs/lightning.gif" alt="" class="review-gif">
-            <br>
-            <br>
-            <br>
-            <div class="review-content">
-                They created a wonderful website for my pet grooming shop using WordPress. They were efficient and very 
-                helpful throughout the process. The team communicated clearly and made sure all my needs were met. 
-                The final product is attractive and user-friendly. I highly recommend AB Info for their excellent 
-                service and expertise.
-            </div>
-            <div class="review-bottom">
-                <hr class="review-line">
-                <p class="reviewer-name">Rajiv Rolhan</p>
-            </div>
-        </div>
-        <div class="review" id="review4">
-            <img src="/assets/gifs/lightning.gif" alt="" class="review-gif">
-            <br>
-            <br>
-            <br>
-            <div class="review-content">
-                AB Info created a fantastic website for my mutual fund business. They were professional and efficient 
-                throughout the project. The team was knowledgeable and provided clear, helpful advice. The website is 
-                modern, informative, and easy to navigate. I'm very satisfied with their work.
-            </div>
-            <div class="review-bottom">
-                <hr class="review-line">
-                <p class="reviewer-name">Alpana Singh</p>
-            </div>
-        </div>
-        <div class="review" id="review5">
-            <img src="/assets/gifs/lightning.gif" alt="" class="review-gif">
-            <br>
-            <br>
-            <br>
-            <div class="review-content">
-                AB Info did an outstanding job building my mobile aplication. They were professional, efficient, and easy 
-                to work with. The team was very knowledgeable and provided clear guidance throughout the process. The final 
-                website is sleek, fast, and user-friendly. I am extremely pleased with their work and highly 
-                recommend AB Info to others.
-            </div>
-            <div class="review-bottom">
-                <hr class="review-line">
-                <p class="reviewer-name">Apvinder Shandhu</p>
-            </div>
-        </div>
-        <div class="review" id="review6">
-            <img src="/assets/gifs/lightning.gif" alt="" class="review-gif">
-            <br>
-            <br>
-            <br>
-            
-            <div class="review-content">
-                AB Info excels in web development. They delivered a superb website for my business. The team was 
-                skilled, responsive, and guided me through every step of the development process. The website 
-                they created is intuitive, fast, and exactly what I needed. I highly recommend AB Info for 
-                anyone looking to build a top-notch web solution.
-            </div>
-            <div class="review-bottom">
-                <hr class="review-line">
-                <p class="reviewer-name">Dipesh Arora</p>
-            </div>
-        </div>
+    </div>
     </div>
 </div>
 <section class="project-area-start ptb-100">

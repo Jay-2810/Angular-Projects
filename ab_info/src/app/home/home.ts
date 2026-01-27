@@ -1,5 +1,5 @@
 import { AsyncPipe } from '@angular/common';
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, ViewChild, ElementRef, HostListener } from '@angular/core';
 import { Observable, from, interval, of, concat } from 'rxjs';
 import { concatMap, delay, ignoreElements, map, repeat, take } from 'rxjs/operators';
 
@@ -49,5 +49,73 @@ export class Home implements OnInit {
 
       of("").pipe(delay(500),ignoreElements())
     );
+  }
+
+  @ViewChild('scrollContainer') scrollContainer!: ElementRef;
+  @ViewChild('track') track!: ElementRef;
+
+  scrollPercentage = 0;
+  isDragging = false;
+  startX = 0;
+  startScrollLeft = 0;
+  onScroll() {
+    if (this.isDragging) return;
+    this.calculatePercentage();
+  }
+
+  calculatePercentage() {
+    const el = this.scrollContainer.nativeElement;
+    const maxScroll = el.scrollWidth - el.clientWidth;
+    if (maxScroll <= 0) return;
+
+    // Use 60 because: 100% (track) - 40% (thumb width) = 60% available travel
+    const percentage = (el.scrollLeft / maxScroll) * 60;
+    this.scrollPercentage = Math.min(Math.max(percentage, 0), 60);
+  }
+
+  // 2. Dragging Logic
+  startDragging(e: any) { 
+    this.isDragging = true;
+    // This will work for MouseEvents without triggering Touch errors
+    this.startX = e.pageX || (e.touches && e.touches[0].pageX);
+    this.startScrollLeft = this.scrollContainer.nativeElement.scrollLeft;
+  }
+  @HostListener('window:touchmove', ['$event'])
+  @HostListener('window:mousemove', ['$event'])
+  onMouseMove(e: any) {
+    if (!this.isDragging) return;
+
+    // Smoothly calculate X regardless of Mouse or Touch
+    const currentX = e.pageX || (e.touches && e.touches[0].pageX);
+    const deltaX = currentX - this.startX;
+    
+    const trackWidth = this.track.nativeElement.clientWidth;
+    const scrollEl = this.scrollContainer.nativeElement;
+    const maxScroll = scrollEl.scrollWidth - scrollEl.clientWidth;
+
+    // Movement math: (Movement / TrackSpace) * ContentSize
+    // Use 0.6 if thumb is 40% wide to ensure it reaches the end
+    const scrollMovement = (deltaX / (trackWidth * 0.6)) * maxScroll;
+    scrollEl.scrollLeft = this.startScrollLeft + scrollMovement;
+    
+    this.calculatePercentage();
+  }
+
+  @HostListener('window:mouseup')
+  @HostListener('window:touchend')
+  stopDragging() {
+    this.isDragging = false;
+  }
+
+  // 3. Jump to position on click
+  onTrackClick(e: MouseEvent) {
+    if ((e.target as HTMLElement).classList.contains('scroll-thumb')) return;
+    
+    const trackRect = this.track.nativeElement.getBoundingClientRect();
+    const clickPos = (e.clientX - trackRect.left) / trackRect.width;
+    const scrollEl = this.scrollContainer.nativeElement;
+    
+    scrollEl.scrollLeft = clickPos * (scrollEl.scrollWidth - scrollEl.clientWidth);
+    this.calculatePercentage();
   }
 }

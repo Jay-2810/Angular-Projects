@@ -26,7 +26,7 @@ li{
     height: 30px;
     font-size: 30px;
     border: none;
-    display: flex;
+    display: none !important;
     align-items: center;
     justify-content: center;
 }
@@ -65,6 +65,7 @@ li{
 }
 ul li a{
     color: #fff;
+    white-space: nowrap;
 }
 .brand-color img {
     height: 150px;
@@ -111,4 +112,50 @@ svg{
     transform: translate(-5px);
     transition: all .3s ease;
     margin-top: -3px;
+}
+@media (max-width: 992px) {
+    .logo{
+        width: 117.5px !important;
+        height: 130px !important;
+        margin: 10px;
+    }
+    .menu-toggle{
+        display: flex !important;
+        margin-left: auto;
+    }
+    .navbar-nav{
+        display: none;
+        flex-direction: column;
+        position: absolute;
+        top: 80px;
+        right: 0;
+        width: 100%;
+        background-color: transparent;
+        text-align: right;
+        padding-right: 110px;
+        z-index: 1000;
+        white-space: nowrap;
+    }
+    .navbar-nav.mobile-show {
+        display: flex; 
+        text-align: right !important;
+    }
+    li{
+        align-items: right;
+    }
+    a{ 
+        text-align: right !important;
+        font-size: 15px !important;
+    }
+    .nav-link span{
+        font-size: 15px !important;
+    }
+    .nav-item {
+        margin: 10px 0;
+        width: 100%;
+        text-align: center;
+    }
+    .nav-container{
+        margin: 0;
+    }
 }

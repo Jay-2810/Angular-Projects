@@ -143,3 +143,28 @@ i[class^="ai-"]:before, i[class*=" ai-"]:before {
     font-weight: 900;
     color: #1eafed;
 }
+@media(max-width: 992px){
+    .footer{
+        padding: 70px;
+        display: block;
+        overflow: hidden;
+    }
+    .container .text-center{
+        padding: 12px;
+    }
+    .col{
+        padding: 10px;
+    }
+    .row{
+        display: flex;
+        flex-direction: column;
+        gap: 0px;
+    }
+    .col .text{
+        display: flex;
+        justify-content: center;
+        align-items: center;     
+        width: 100%;
+    }
+
+}

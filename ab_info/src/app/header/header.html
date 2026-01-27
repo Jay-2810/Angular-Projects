@@ -1,18 +1,20 @@
 <nav class="navbar navbar-expand-lg bg-body-tertiary transparent-header" [ngClass]="{'transparent-header': isHomePage, 'black-header': !isHomePage}">
     <div class="container-fluid">
-        <div class="d-flex align-items-center">
-            <div class="navbar-brand-text">
-                <a class="brand-color" routerLink="/">
-                    <img class="logo" src="/assets/images/ab_info.png" alt="logo">
-                </a>
+        <div style="display: flex; align-items: center;">
+            <div class="d-flex align-items-center">
+                <div class="navbar-brand-text">
+                    <a class="brand-color" routerLink="/">
+                        <img class="logo" src="/assets/images/ab_info.png" alt="logo">
+                    </a>
+                </div>
+            </div>
+            <div style="margin-left: 550px;"> 
+                <button type="button" class="menu-toggle" (click)="menuToggle()">
+                        <span>☰</span>
+                </button>
             </div>
         </div>
-        <span>
-            <button class="menu-toggle" (click)="menuToggle()">
-                <span>☰</span>
-            </button>
-        </span>
-        <div id="navbarNavDropdown" class="justify-content-end">
+        <div id="navbarNavDropdown" class="nav-container">
             <div class="main-menu">
                 <nav class="mobile-menu">
                     <ul class="navbar-nav" [class.mobile-show]="isMenuOpen">

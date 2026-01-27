@@ -163,7 +163,7 @@ img {
     color: #000;
     border-bottom: 1px solid #000;
     display: inline-block;
-    height: 70.4px;
+    height: auto;
     cursor: pointer;
     margin: 0px 0px 10px;
 }
@@ -452,22 +452,6 @@ button{
     cursor: pointer;
     overflow: visible;
 }
-/* [type=button], [type=reset], [type=submit], button {
-    -webkit-appearance: button;
-} */
-/* button, select {
-    text-transform: none;
-} */
-/* button:not(:disabled) {
-    cursor: pointer;
-} */
-/* svg:not(:root) {
-    overflow-clip-margin: content-box;
-    overflow: hidden;
-} */
-/* :not(svg) {
-    transform-origin: 0px 0px;
-} */
 .star-1{
     position: absolute;
     top: 20%;
@@ -571,4 +555,134 @@ button:hover .star-5 {
 button:hover .star-6 {
     opacity: 1;
     transform: translate(20px, 0px) scale(0.8);  /* Bottom Center */
+}
+@media (max-width: 992px) {
+    .console-container {
+        font-size: 1.5em;
+    }
+    .container-1{
+        height: 65vh;
+    }
+    .container-2{
+        margin: 0px 0px 20px !important;
+        height: auto;
+        padding: 20px;
+        flex-direction: column;
+        overflow: hidden;
+    }
+        .content-1{
+        flex-direction: column;
+        align-items: center;
+        padding: 0;
+    }
+    .text-content h1{
+        margin: 0px 0px 8px;
+        height: auto;
+        font-weight: 700;
+        font-size: 50px;
+        color: #1a202c;
+        text-align: center;
+    }
+    .hide{
+        display: none;
+    }
+    .image
+    {
+        height: 200px;
+        width: auto;
+        margin-top: 10px;
+    }
+    .content-wrapper img{
+        margin-left: auto;
+        margin-right: auto;
+        display: block;
+        width: 100%;
+        height: auto;
+        margin-bottom: 20px;
+    }
+    .content-wrapper{
+        display: flex;
+        flex-direction: column;
+        /* width: fit-content; */
+        margin: 20px 0px 0px;
+    }
+    .content-item{
+        display: flex;
+        flex-direction: column;
+    }
+    .service-block{
+        padding: 10px;
+    }
+    .service-block h2{
+        font-size: 40px;
+    }
+    .service-block p{
+        font-size: 16px;
+        display: inline;
+    }
+    .service-info{
+        display: flex;
+        flex-direction: column;
+    }
+    .client-container{
+        padding: 20px;
+    }
+    .client-heading{
+        font-size: 31px;
+        text-align: center;
+    }
+    .client-paragraph{
+        font-size: 18px;
+        display: inline;
+    }
+    .reviews-container {
+        display: flex;
+        overflow-x: auto;
+        scroll-behavior: smooth;
+        gap: 20px;
+        padding: 20px;
+        scroll-snap-type: x mandatory;
+        scrollbar-width: none;
+        scroll-behavior: smooth;
+        webkit-overflow-scrolling: touch;
+    }
+    .review {
+        flex: 0 0 85%; /* Peek effect: shows edge of next card */
+        scroll-snap-align: center;
+    }
+    /* The Scroll Bar / Button Logic */
+    .custom-scroll-nav {
+        display: flex;
+        justify-content: center;
+        margin-top: 10px;
+    }
+    .scroll-track {
+        width: 100%;
+        height: 10px;
+        background: #e0e0e0;
+        border-radius: 10px;
+        position: relative;
+        overflow: hidden;
+    }
+    .scroll-thumb {
+        position: absolute;
+        width: 40%;
+        height: 100%;
+        background: #888;
+        border-radius: 10px;
+        /* Use a conditional class or style to disable transition during drag */
+        transition: smooth; 
+    }
+
+    .scroll-thumb:active {
+        transition: smooth; /* Instant movement when dragging */
+    }
+}
+@media (min-width: 1025px) {
+    .custom-scroll-nav { display: none; }
+    /* .reviews-container { overflow-x: hidden; flex-wrap: wrap; } */
+}
+.reviews-section {
+    position: relative;
+    padding-bottom: 40px;
 }
