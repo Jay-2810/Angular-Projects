@@ -87,15 +87,13 @@ img, svg {
     transform-origin: 0px 0px;
 }
 .button:hover {
-  transform: scale(1.05); /* Scales the whole button up slightly */
+  transform: scale(1.05);
 }
-
-/* 2. THE SHINE EFFECT (The left-to-right sweep) */
 .button::before {
   content: "";
   position: absolute;
   top: 0;
-  left: -50%; /* Start hidden on the left */
+  left: -50%;
   width: 15%;
   height: 100%;
   background: linear-gradient(
@@ -104,11 +102,9 @@ img, svg {
     rgba(255, 255, 255, 0.5),
     transparent
   );
-  transform: skewX(-25deg); /* Slanted light look */
+  transform: skewX(-25deg);
   z-index: 2;
 }
-
-/* When cursor touches the button, move the shine to the right */
 .button:hover::before {
   left: 150%;
   transition: left 1.2s ease-in-out 0s; 
@@ -130,8 +126,8 @@ img, svg {
 .about{
     display: flex;
     flex-direction: column;
-    max-width: 100%;
-    width: 80%;
+    /* max-width: 100%; */
+    /* width: 100%; */
     box-shadow: 0 0 10px #0000001a;
     background-color: #fff;
     padding: 20px;
@@ -192,20 +188,16 @@ nav {
     color: #495057;
     transition: color 0.2s ease-in-out;
 }
-/* Custom color for the active tab */
 .nav-tabs .nav-link.active {
-    background-color: #1eafed; /* Bootstrap Primary Blue */
+    background-color: #1eafed;
     border-radius: 5px;
     font-weight: 500 !important;
 }
-/* Hover effect */
 .nav-link:hover:not(.active) {
     background-color: #1eafed;
     border-radius: 5px;
     font-weight: 500 !important;
 }
-
-/* Remove blue glow on click (accessibility focus) */
 .nav-link:focus {
     outline: none;
     box-shadow: none;
@@ -226,12 +218,12 @@ nav {
     /* margin: 24px 0px 0px; */
     width: 100%;
 }
-.pt-4 {
+/* .pt-4 {
     padding-top: 1.5rem !important;
 }
 .p-0 {
     padding: 0 !important;
-}
+} */
 .tab-pane{
     width: 100%;
     padding: 20px;
@@ -246,14 +238,14 @@ nav {
 .fade:not(.show) {
     opacity: 0;
 }
-@media (prefers-reduced-motion: reduce) {
+/* @media (prefers-reduced-motion: reduce) {
     .fade {
         transition: none;
     }
-}
-.fade {
+} */
+/* .fade {
     transition: opacity .15s linear;
-}
+} */
 p {
     display: block;
     margin-block-start: 1em;
@@ -371,4 +363,82 @@ iframe {
     height: 600px;
     overflow-clip-margin: content-box !important;
     overflow: clip !important;
+}
+@media(max-width: 992px){
+    .about-container{
+        padding: 20px;
+    }
+    .about{
+        padding: 20px;
+    }
+    .text h1{
+        font-size: 36px;
+    }
+    .text p{
+        font-size: 16px;
+    }
+    .button{
+        font-size: 14px;
+        padding-block: .4rem;
+        padding-inline: 1rem;
+        height: auto;
+        width: auto;
+    }
+    .aboutus-container{
+        padding: 20px;
+    }
+    .text-container h1{
+        font-size: 32px;
+    }
+    .nav-tabs{
+        flex-wrap: nowrap;
+        overflow-x: auto;
+    }
+    .nav-tabs button{
+        padding: 10px;
+        margin: 0px 10px 0px 0px;
+        width: 100%;
+        font-size: 14px !important;
+    }
+    .lead{
+        font-size: 16px;
+        text-align: left;
+        width: 100%;
+    }
+    .counting{
+        padding: 10px;
+    }
+    .stats-container{
+        flex-direction: column;
+        gap: 30px;
+    }
+    .services-container{
+        padding: 20px;
+    }
+    .services-heading{
+        font-size: 30px;
+        text-align: center;
+    }
+    .services-description{
+        font-size: 15px;
+        width: 100%;
+    }
+    .services-explain{
+        padding: 10px;
+    }
+    .services-all{
+        flex-direction: column;
+    }
+    .services-info{
+        flex: 1 1 100%;
+        background-color: #fff;
+        border: 1px solid #000;
+        transform: none;
+    }
+    .services-text .text-1{
+        font-size: 16px !important;
+    }
+    .services-text .text-2{
+        font-size: 12.8px !important;
+    }
 }

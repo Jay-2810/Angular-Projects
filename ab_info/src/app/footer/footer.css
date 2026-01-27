@@ -166,5 +166,7 @@ i[class^="ai-"]:before, i[class*=" ai-"]:before {
         align-items: center;     
         width: 100%;
     }
-
+    .break{
+        display: none;
+    }
 }

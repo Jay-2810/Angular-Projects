@@ -45,8 +45,28 @@ li{
     margin-left: auto;
     margin-bottom: 0;
 }
+.main-menu a:hover{
+    color: #1eafed;
+    text-decoration-color: #1eafed;
+}
+
 .main-menu .active{
     color: #1eafed;
+}
+.navbar-nav .nav-link::after {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 2px;
+    bottom: -2px;
+    left: 0;
+    background-color: #1eafed;
+    transform: scaleX(0);
+    transform-origin: center;
+    transition: transform 0.3s ease-in-out;
+}
+.navbar-nav .nav-link:hover::after {
+    transform: scaleX(1);
 }
 .main-menu a{
     color: black;
@@ -113,49 +133,87 @@ svg{
     transition: all .3s ease;
     margin-top: -3px;
 }
+.button-setter{
+    display: flex;
+    align-items: right !important;
+    margin-left: auto;
+}
 @media (max-width: 992px) {
     .logo{
         width: 117.5px !important;
         height: 130px !important;
         margin: 10px;
     }
+    .main-menu ul li a{
+        font-size: 15px;
+        margin-right: -50px;
+        padding-bottom: 5px;
+        text-align: right;
+        line-height: 2;
+        text-decoration: none;
+        color: #fff;
+    }
+    .nav-container {
+        display: flex !important;
+        flex-direction: column !important;
+    }
     .menu-toggle{
         display: flex !important;
-        margin-left: auto;
+    }
+    .container-fluid{
+        flex-wrap: wrap;
+        justify-content: space-between;
+        align-items: center;
+    }
+    .mobile-menu{
+        justify-content: left;
+    }
+    .main-menu .mobile-menu{
+        display: flex !important;
+        width: 100% !important;
+        flex-direction: column !important;
+        align-items: flex-end !important;
+        margin: 0;
     }
     .navbar-nav{
         display: none;
-        flex-direction: column;
-        position: absolute;
-        top: 80px;
-        right: 0;
-        width: 100%;
+        flex-direction: column !important;
+        position: relative;
+        width: 100% !important;
         background-color: transparent;
         text-align: right;
-        padding-right: 110px;
         z-index: 1000;
         white-space: nowrap;
+        align-items: flex-end !important;
     }
     .navbar-nav.mobile-show {
-        display: flex; 
-        text-align: right !important;
+        display: flex;
+    }
+    ul{
+        gap: 15px;
     }
     li{
         align-items: right;
     }
     a{ 
-        text-align: right !important;
         font-size: 15px !important;
     }
     .nav-link span{
         font-size: 15px !important;
     }
     .nav-item {
-        margin: 10px 0;
-        width: 100%;
-        text-align: center;
+        width: auto; 
+        display: flex;
+        justify-content: flex-end;
+        width: auto;
     }
     .nav-container{
         margin: 0;
+        width: 100%;
+        order: 6;
+    }
+    .nav-link {
+        text-align: right;
+        display: inline-block;
     }
 }

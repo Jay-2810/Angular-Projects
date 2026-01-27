@@ -31,29 +31,29 @@
         </div>
         <nav>
             <div id="nav-tab" role="tablist" class="nav nav-tabs">
-            <button 
-                id="nav-tab1"
-                class="nav-link" 
-                [class.active]="activeTab === 'mission'" 
-                (click)="setActiveTab('mission')"
-                type="button" 
-                role="tab">
-                Our Mission
-            </button>
+                <button 
+                    id="nav-tab1"
+                    class="nav-link" 
+                    [class.active]="activeTab === 'mission'" 
+                    (click)="setActiveTab('mission')"
+                    type="button" 
+                    role="tab">
+                    Our Mission
+                </button>
 
-            <button 
-                id="nav-tab2"
-                class="nav-link" 
-                [class.active]="activeTab === 'services'" 
-                (click)="setActiveTab('services')"
-                type="button" 
-                role="tab">
-                Services
-            </button>
+                <button 
+                    id="nav-tab2"
+                    class="nav-link" 
+                    [class.active]="activeTab === 'services'" 
+                    (click)="setActiveTab('services')"
+                    type="button" 
+                    role="tab">
+                    Services
+                </button>
             </div>
         </nav>
         <div id="nav-tabcontent" class="tab-content p-0 pt-4">
-            <hr style="color: rgb(244, 244, 244); width: 1056.64px;">
+            <hr style="color: rgb(244, 244, 244); width: auto;">    
             <div *ngIf="activeTab ==='mission'" id="tab1-1" role="tabpanel" class="tab-pane fade show active" aria-labelledby="nav-tab1">
                 <p class="lead font-w-7 text-black">
                     At AB Info, our mission is to drive innovation and excellence in everything we do. We are 

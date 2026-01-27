@@ -289,3 +289,31 @@ img, svg {
     margin: 0px 0px 16px;
     font-family: system-ui, -apple-system, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji";
 }
+@media(max-width: 992px){
+    .about-container{
+        padding: 20px;
+    }
+    .text h1{
+        font-size: 36px;
+    }
+    .text p{
+        font-size: 16px;
+    }
+    .button{
+        font-size: 14px;
+        padding: 6.4px 16px;
+        height: auto;
+    }
+    .career-container{
+        padding: 20px;
+    }
+    .heading h1{
+        font-size: 25px;
+        margin: 0;
+    }
+    .heading p{
+        font-size: 15px;
+        white-space: natural;
+        margin: 10px 0px 0px;
+    }
+}

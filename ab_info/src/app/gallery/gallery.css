@@ -120,3 +120,8 @@ p {
     transition: transform .3s ease-in-out;
     display: block;
 }
+@media(max-width:992px){
+    .text h1{
+        font-size: 64px;
+    }
+}

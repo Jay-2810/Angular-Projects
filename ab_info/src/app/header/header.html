@@ -1,40 +1,45 @@
-<nav class="navbar navbar-expand-lg bg-body-tertiary transparent-header" [ngClass]="{'transparent-header': isHomePage, 'black-header': !isHomePage}">
+<nav class="navbar navbar-expand-lg bg-body-tertiary transparent-header"
+    [ngClass]="{'transparent-header': isHomePage, 'black-header': !isHomePage}">
     <div class="container-fluid">
-        <div style="display: flex; align-items: center;">
-            <div class="d-flex align-items-center">
-                <div class="navbar-brand-text">
-                    <a class="brand-color" routerLink="/">
-                        <img class="logo" src="/assets/images/ab_info.png" alt="logo">
-                    </a>
-                </div>
+        <div class="d-flex align-items-center">
+            <div class="navbar-brand-text">
+                <a class="brand-color" routerLink="/">
+                    <img class="logo" src="/assets/images/ab_info.png" alt="logo">
+                </a>
             </div>
-            <div style="margin-left: 550px;"> 
-                <button type="button" class="menu-toggle" (click)="menuToggle()">
-                        <span>☰</span>
-                </button>
-            </div>
+        </div>
+        <div class="button-setter">
+            <button type="button" class="menu-toggle" (click)="menuToggle()">
+                <span>☰</span>
+            </button>
         </div>
         <div id="navbarNavDropdown" class="nav-container">
             <div class="main-menu">
                 <nav class="mobile-menu">
                     <ul class="navbar-nav" [class.mobile-show]="isMenuOpen">
                         <li class="nav-item">
-                            <a class="nav-link" (click)="closeMenu()" routerLink="/" routerLinkActive="active" [routerLinkActiveOptions]="{exact:true}">HOME</a>
+                            <a class="nav-link" (click)="closeMenu()" routerLink="/" routerLinkActive="active"
+                                [routerLinkActiveOptions]="{exact:true}">HOME</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" (click)="closeMenu()" routerLink="/about" routerLinkActive="active">ABOUT US</a>
+                            <a class="nav-link" (click)="closeMenu()" routerLink="/about"
+                                routerLinkActive="active">ABOUT US</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" (click)="closeMenu()" routerLink="/team" routerLinkActive="active">TEAM</a>
+                            <a class="nav-link" (click)="closeMenu()" routerLink="/team"
+                                routerLinkActive="active">TEAM</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" (click)="closeMenu()" routerLink="/gallery" routerLinkActive="active">GALLERY</a>
+                            <a class="nav-link" (click)="closeMenu()" routerLink="/gallery"
+                                routerLinkActive="active">GALLERY</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" (click)="closeMenu()" routerLink="/career" routerLinkActive="active">CAREER</a>
+                            <a class="nav-link" (click)="closeMenu()" routerLink="/career"
+                                routerLinkActive="active">CAREER</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="https://wa.me/919974416120" target="_blank" style="text-decoration: none;">
+                            <a class="nav-link" href="https://wa.me/919974416120" target="_blank"
+                                style="text-decoration: none;">
                                 <span>Contact Us</span>
                                 <svg width="15px" height="10px" viewBox="0 0 13 10">
                                     <path d="M1,5 L11,5"></path>
