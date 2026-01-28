@@ -25,13 +25,15 @@ export class Home implements OnInit {
     {text: "Project Management", color: 'rebeccapurple'},
     {text: "Digital Marketing", color: 'lightblue'}
   ];
-  typewriterText$!:Observable<string>;
+  typewriterText$!:Observable<{text: string, color: string}>;
   ngOnInit(){
     this.typewriterText$=from(this.titles).pipe(
-      concatMap(item=>{
-          this.currentWordColor=item.color
-          return this.typeWriterEffect(item.text)
-        }),
+      concatMap(item => 
+      // Map the typewriter effect strings to include the color
+      this.typeWriterEffect(item.text).pipe(
+        map(str => ({ text: str, color: item.color }))
+      )
+    ),
       repeat()
     );
   }

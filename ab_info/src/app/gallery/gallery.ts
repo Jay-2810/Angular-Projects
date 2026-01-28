@@ -37,4 +37,5 @@ export class Gallery {
   setCategory(category: string) {
     this.selectedCategory = category;
   }
+  
 }

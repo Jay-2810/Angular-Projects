@@ -1,10 +1,10 @@
-import { Routes } from '@angular/router';
+import { Routes, RouterModule } from '@angular/router';
+import { NgModule } from '@angular/core';
 import { Home } from './home/home';
 import { AboutUs } from './about-us/about-us';
 import { Team } from './team/team';
 import { Gallery } from './gallery/gallery';
 import { Career } from './career/career';
-import { ContactUs } from './contact-us/contact-us';
 
 export const routes: Routes = [
 
@@ -13,5 +13,4 @@ export const routes: Routes = [
     {path:"team",component:Team},
     {path:"gallery",component:Gallery},
     {path:"career",component:Career},
-    {path:"contact",component:ContactUs}
 ];
