@@ -109,7 +109,7 @@ img, svg {
     background-color: transparent;
 }
 .black-header{
-    background-color: black;
+    background: linear-gradient(to right, #000000, #1a1a1a) !important;
 }
 .nav-link span{
     position: relative;

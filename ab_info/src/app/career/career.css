@@ -313,7 +313,24 @@ img, svg {
     }
     .heading p{
         font-size: 15px;
-        white-space: natural;
+        width: 100%;
         margin: 10px 0px 0px;
+    }
+    .button-1{
+        padding: 24px;
+    }
+    .why-container{
+        padding: 20px;
+    }
+    .ab-title{
+        font-size: 36px;
+        text-align: center;
+    }
+    .ab-subtitle{
+        font-size: 18px;
+    }
+    .ab-benefits{
+        display: flex;
+        flex-direction: column;
     }
 }
