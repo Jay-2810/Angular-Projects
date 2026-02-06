@@ -22,20 +22,20 @@
 
             <!-- 🔽 Display records here -->
             <tbody>
-              <tr *ngFor="let friend of friends; let i = index">
+              <tr *ngFor="let friend of friends(); let i = index">
                 <td>{{ friend.id}}</td>
                 <td>{{ friend.name }}</td>
                 <td>{{ friend.age }}</td>
                 <td>{{ friend.address }}</td>
                 <td>{{ friend.email }}</td>
                 <td>
-                  <button class="btn btn-sm btn-warning me-2">Edit</button>
-                  <button class="btn btn-sm btn-danger">Delete</button>
+                  <button (click)="onEdit(friend)" class="btn btn-sm btn-warning me-2">Edit</button>
+                  <button (click)="onDelete(friend.id)" class="btn btn-sm btn-danger">Delete</button>
                 </td>
               </tr>
 
               <!-- Optional: No data message -->
-              <tr *ngIf="friends.length === 0">
+              <tr *ngIf="!friends() || friends().length === 0">
                 <td colspan="5" class="text-center text-muted py-3">
                   No records found
                 </td>
@@ -92,10 +92,10 @@
           </div>
 
           <div class="d-grid">
-            <button class="btn btn-success fw-bold">
+            <button (click)="onSave()" class="btn btn-success fw-bold">
               Save Friend
             </button>
-            <button class="btn btn-success fw-bold">
+            <button (click)="clearForm()" class="btn btn-success fw-bold">
               Clear
             </button>
           </div>
