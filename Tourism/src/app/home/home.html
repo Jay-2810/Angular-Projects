@@ -1,0 +1,18 @@
+<table style="border: 1px solid black;">
+    <tr>
+        <th>ID</th>
+        <th>Destination</th>
+        <th>Duration</th>
+        <th>Base Price</th>
+        <th>Tour Name</th>
+        <th>Image</th>
+    </tr>
+    <tr *ngFor="let t of tours()">
+        <td>{{t.tour_id}}</td>
+        <td>{{t.destination}}</td>
+        <td>{{t.duration}}</td>
+        <td>{{t.base_price}}</td>
+        <td>{{t.tour_name}}</td>
+        <td><img [src]="'https://localhost:44388'+t.tour_image" alt="Tour Image" width="100" height="100"></td>
+    </tr>
+</table>
